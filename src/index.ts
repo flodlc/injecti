@@ -1,28 +1,22 @@
-type DefaultContainerType = Record<string, unknown>;
-
-const createInjektContainer = <ContainerType extends DefaultContainerType>(
-  dependencies: ContainerType = {} as ContainerType
-) => {
-  let container = { ...dependencies };
-  return {
-    set(
-      key: keyof ContainerType,
-      dependency: ContainerType[keyof ContainerType]
-    ) {
-      container[key] = dependency;
-    },
-    get<Type, KeyType extends keyof ContainerType = string>(key: KeyType) {
-      return container[key] as Type extends ContainerType[KeyType]
-        ? Type
-        : ContainerType[KeyType];
-    },
-    reset: () => {
-      container = { ...dependencies };
-    },
-    list() {
-      return Object.keys(container) as (keyof ContainerType)[];
-    },
+const injektor =
+  ({ onCall }: { onCall?: (p: { args: unknown }) => void } = {}) =>
+  <
+    U extends (deps: D) => (...args: A) => any,
+    D extends any,
+    A extends Array<any>
+  >(
+    deps: D,
+    usecase: U
+  ) => {
+    return [
+      (...args: Parameters<ReturnType<U>>) => {
+        onCall?.({ args });
+        return usecase(deps)(...(args ?? [])) as ReturnType<U>;
+      },
+      usecase,
+    ] as const;
   };
-};
 
-export { createInjektContainer };
+const injekt = injektor();
+
+export { injektor, injekt };
