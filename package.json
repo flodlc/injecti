@@ -1,6 +1,7 @@
 {
   "name": "injecti",
-  "author": "flodlc",
+  "repository": "https://github.com/flodlc/injecti",
+  "author": "flodlc <f.delacomble@gmail.com>",
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
