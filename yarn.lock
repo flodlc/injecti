@@ -2738,9 +2738,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"injekt@workspace:.":
+"injecti@workspace:.":
   version: 0.0.0-use.local
-  resolution: "injekt@workspace:."
+  resolution: "injecti@workspace:."
   dependencies:
     "@types/jest": ^29.0.0
     "@types/node": ^18.7.16

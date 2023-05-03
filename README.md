@@ -1,7 +1,7 @@
 <h1 align="center">Pg-mate</h1>
 <p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2000&pause=2000&center=true&width=540&height=80&lines=First+class+dependency+injection+for+PostgreSQL." alt="Typing SVG" /></a></p>
 
-### Injekt is a simple dependency injection tool for typescript with the following features:
+### Injecti is a simple dependency injection tool for typescript with the following features:
 
 - First class dependency injection without container
 - Fully written in TypeScript
@@ -18,24 +18,24 @@ Table of Contents:
 
 ## Installation
 
-To get started, install Pg-mate using npm or yarn:
+To get started, install injecti using npm or yarn:
 
 ```sh
-npm install injekt
+npm install injecti
 # or
-yarn add injekt
+yarn add injecti
 ```
 
 ## Usage
 
 ```typescript
-import { injeckt } from 'injekt';
+import { inject } from 'injecti';
 
 const insertUserInDB = (name: string) => {
   return db.insert('user', { name });
 };
 
-const [createUser, createUserFactory] = injeckt(
+const [createUser, createUserFactory] = inject(
   { insertUserInDB },
   (deps) => (name: string) => {
     return deps.insertUserInDB(name);
@@ -56,4 +56,4 @@ const result = createUser('John');
 
 ---
 
-That's it! You can now use injekt to create unit testable functions.
+That's it! You can now use injecti to create unit testable functions.

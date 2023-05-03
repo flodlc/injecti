@@ -1,4 +1,4 @@
-const injektor =
+const injector =
   ({ onCall }: { onCall?: (p: { args: unknown }) => void } = {}) =>
   <
     U extends (deps: D) => (...args: A) => any,
@@ -17,6 +17,6 @@ const injektor =
     ] as const;
   };
 
-const injekt = injektor();
+const inject = injector();
 
-export { injektor, injekt };
+export { inject, injector };
