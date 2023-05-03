@@ -1,5 +1,5 @@
 {
-  "name": "@flodlc/injekt",
+  "name": "injekt",
   "author": "flodlc",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -8,19 +8,13 @@
   "packageManager": "yarn@3.2.1",
   "version": "1.0.1",
   "scripts": {
-    "dev": "yarn watch:source && yarn watch:types",
-    "watch:source": "tsup src/index.ts --watch",
+    "dev": "tsup src/index.ts --watch",
     "build": "tsup src/index.ts --dts",
     "test": "jest"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.7.16",
-    "@types/react": "^18.0.19",
     "esbuild-jest": "^0.5.0",
     "jest": "^29.0.2",
     "tsup": "^6.2.3",
@@ -28,5 +22,12 @@
   },
   "files": [
     "dist/*"
+  ],
+  "keywords": [
+    "di",
+    "dependency injection",
+    "node",
+    "typescript",
+    "unit tests"
   ]
 }
