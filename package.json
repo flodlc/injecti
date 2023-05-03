@@ -29,6 +29,7 @@
     "dependency injection",
     "node",
     "typescript",
-    "unit tests"
+    "unit tests",
+    "clean code"
   ]
 }
