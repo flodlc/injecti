@@ -1,4 +1,4 @@
-<h1 align="center">Pg-mate</h1>
+<h1 align="center">Injecti</h1>
 <p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2000&pause=2000&center=true&width=540&height=80&lines=First+class+dependency+injection+for+PostgreSQL." alt="Typing SVG" /></a></p>
 
 ### Injecti is a simple dependency injection tool for typescript with the following features:
